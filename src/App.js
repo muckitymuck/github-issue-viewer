@@ -5,6 +5,9 @@ import ReactGA from 'react-ga';
 import Layout from './components/Layout';
 import Routes from './routes'
 
+const trackingCode = process.env.REACT_APP_GOOGLE_TRACKING_ID;
+let trackPage = () => { };
+
 function App() {
   return (
     <div className="App">
