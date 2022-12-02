@@ -1,5 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import Layout from './components/Layout';
+import Routes from './routes'
 
 function App() {
   return (
