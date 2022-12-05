@@ -22,7 +22,7 @@ import Routes from './routes'
 // }
 
 class App extends Component {
-  static PropTypes = {
+  static propTypes = {
     location: PropTypes.shape({
       pathname: PropTypes.string.isRequired,
       search: PropTypes.string.isRequired,
