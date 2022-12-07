@@ -73,12 +73,12 @@ class Layout extends React.Component {
     this.input = React.createRef();
   }
 
-  onSubmitSearch = (e) => {
-    e.preventDefault();
-    const { history } = this.props;
-    const q = this.input.current.value;
-    history.push(`/search?q=${q}`);
-  }
+  // onSubmitSearch = (e) => {
+  //   e.preventDefault();
+  //   const { history } = this.props;
+  //   const q = this.input.current.value;
+  //   history.push(`/search?q=${q}`);
+  // }
 
   render() {
     const { classes, children } = this.props;
