@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 import IssueListItem from './IssueListItem';
 import { Message } from '@material-ui/icons';
 import { TablePagination } from '@material-ui/core';
-//import IssuesLoader from './IssueLoader';
+import IssuesLoader from './IssueLoader';
 //import Pagination from './Pagination';
 //import Message from './Message';
 

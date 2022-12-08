@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import Layout from './components/Layout';
 import Routes from './routes'
 
+let trackPage = () => { };
 
 class App extends Component {
   static propTypes = {

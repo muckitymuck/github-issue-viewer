@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import './index.css';
 import Theme from './components/Theme';
 import App from './App';
-//import reportWebVitals from './reportWebVitals';
 
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from '@apollo/client';
@@ -28,7 +26,7 @@ const client = new ApolloClient({
   ]),
   cache: new InMemoryCache(),
 });
-
+console.log(client)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
