@@ -14,7 +14,7 @@ import { BrowserRouter } from 'react-router-dom';
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
   headers: {
-    authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+    Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
   }
 
 })
