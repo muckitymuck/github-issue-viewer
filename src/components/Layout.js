@@ -73,6 +73,8 @@ class Layout extends React.Component {
     this.input = React.createRef();
   }
 
+
+
   // onSubmitSearch = (e) => {
   //   e.preventDefault();
   //   const { history } = this.props;
