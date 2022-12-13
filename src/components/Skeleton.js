@@ -4,6 +4,8 @@ import AvatarBase from './Avatar';
 export const Span = createSkeletonElement('span')
 export const Avatar = createSkeletonElement(AvatarBase);
 
+
+
 export const placeholder = length => 'x '.repeat(length / 2);
 
 export const withSkeleton = createSkeletonElement;
