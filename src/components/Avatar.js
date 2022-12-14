@@ -26,4 +26,6 @@ Avatar.propTypes = {
     src: PropTypes.string,
 };
 
+
+
 export default withStyles(styles)(Avatar);
