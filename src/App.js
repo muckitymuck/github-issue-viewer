@@ -27,6 +27,7 @@ class App extends Component {
 
     // if (currentPage !== nextPage) {
     //   trackPage(nextPage);
+    
     // }
   }
 
