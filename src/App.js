@@ -26,8 +26,7 @@ class App extends Component {
     const nextPage = `${nextLocation.pathname}${nextLocation.search}`;
 
     // if (currentPage !== nextPage) {
-    //   trackPage(nextPage);
-    
+    //   trackPage(nextPage);   
     // }
   }
 
