@@ -17,7 +17,7 @@ class App extends Component {
   componentDidMount() {
     const { location } = this.props;
     const page = `${location.pathname}${location.search}`;
- //   trackPage(page);
+    trackPage(page);
   }
   componentDidUpdate(prevProps) {
     const { location: prevLocation } = prevProps;
@@ -25,9 +25,9 @@ class App extends Component {
     const currentPage = `${prevLocation.pathname}${prevLocation.search}`;
     const nextPage = `${nextLocation.pathname}${nextLocation.search}`;
 
-    // if (currentPage !== nextPage) {
-    //   trackPage(nextPage);   
-    // }
+    if (currentPage !== nextPage) {
+      trackPage(nextPage);   
+    }
   }
 
   render() {

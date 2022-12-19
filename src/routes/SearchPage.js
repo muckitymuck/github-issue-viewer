@@ -19,22 +19,24 @@ const styles = theme => ({
         paddingRight: 0,
     },
     title: {
-        ...theme.mixin.gutters(),
+        ...theme.mixins.gutters(),
     }
 });
 
 const SEARCH_REPO = gql`
     query SearchRepo($query: String!){
-        edges {
-            node {
-                ...on Repository {
-                    id
-                    name
-                    nameWithOwner
-                    owner { login }
-                    description
-                    stargazers {
-                        totalCount
+        search(query: $query, type: REPOSITORY, first: 10){
+            edges {
+                node {
+                    ...on Repository {
+                        id
+                        name
+                        nameWithOwner
+                        owner { login }
+                        description
+                        stargazers {
+                            totalCount
+                        }
                     }
                 }
             }
