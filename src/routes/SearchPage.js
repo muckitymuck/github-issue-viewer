@@ -82,7 +82,7 @@ const Search = ({ classes, children, location}) => {
                                     return (
                                         <Link
                                             key={repo.id}
-                                            to={` /${repo.owner.login}/${repo.name}`}
+                                            to={`/${repo.owner.login}/${repo.name}`}
                                         >
                                             <RepoListItem
                                                 title={repo.nameWithOwner}
