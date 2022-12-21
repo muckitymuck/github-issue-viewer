@@ -6,7 +6,7 @@ import List from '@material-ui/core/List';
 import IssueListItem from './IssueListItem';
 import { Message } from '@material-ui/icons';
 import { TablePagination } from '@material-ui/core';
-import IssuesLoader from './IssueLoader';
+import IssuesLoader from './IssuesLoader';
 //import Pagination from './Pagination';
 //import Message from './Message';
 
@@ -29,9 +29,9 @@ class IssueList extends Component {
         name: PropTypes.string.isRequired,
         state: PropTypes.string,
     }
-    static defaultProps = {
-        state: IssueState.OPEN,
-    }
+    // static defaultProps = {
+    //     state: IssueState.OPEN,
+    // }
     render() {
         const { owner, name, state } = this.props;
         return (

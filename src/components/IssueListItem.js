@@ -4,6 +4,7 @@ import compose from 'recompose/compose';
 import cx from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import CommentIcon from '@material-ui/icons/ModeCommentOutlined';
 
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -26,9 +27,9 @@ const styles = theme => ({
 });
 
 const Comment = withSkeleton(CommentIcon);
-const StateIcon = withSkeleton(IssueStateIcon);
+// const StateIcon = withSkeleton(IssueStateIcon);
 
-const IssueListItem = ({ classes, title, createdAt, state, author, commentCount, loading, other }) => (
+const IssueListItem = ({ classes, title, number, createdAt, state, author, commentCount, loading, ...other }) => (
     <ListItem className={cx(classes.root, { loading })} button { ...other }>
         <ListItemIcon className={classes.listItemIcon}>
             
@@ -57,9 +58,9 @@ const IssueListItem = ({ classes, title, createdAt, state, author, commentCount,
 );
 
 IssueListItem.propTypes = {
-    title: PropType.string,
+    title: PropTypes.string,
     number: PropTypes.number,
-    state: PropTypes.oneOf([IssueState.OPEN, IssueState.CLOSED]),
+    // state: PropTypes.oneOf([IssueState.OPEN, IssueState.CLOSED]),
     author: PropTypes.string,
     createdAt:PropTypes.string,
     commentCount: PropTypes.number,
@@ -71,7 +72,7 @@ IssueListItem.defaultProps= {
 };
 
 export default compose(
-    withSkeletonProvide({
+    withSkeletonProvider({
         title: placeholder(50),
         author: placeholder(10),
         state: null,

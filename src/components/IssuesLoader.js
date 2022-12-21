@@ -47,7 +47,7 @@ const IssuesLoader = ({ children, owner, name, state, pageSize }) => {
         >
             {({ loading, data, error, fetchMore }) => {
                 const { repository = {} } = data;
-                const { pageInfo = {}, edge = [] } = repository.issues || {};
+                const { pageInfo = {}, edges = [] } = repository.issues || {};
 
                 return children({
                     loading, 
