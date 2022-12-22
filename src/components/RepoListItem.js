@@ -9,7 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 
 import { withSkeleton, withSkeletonProvider, Span, placeholder } from './Skeleton';
-import { ListItemText } from '@material-ui/core';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = theme => ({
     root: {
@@ -46,19 +46,20 @@ const RepoListItem = ({ classes, className, title, description, starCount, loadi
         <ListItemText
             disableTypography
             primary={
-                <Typography className={cx(classes.root, className, { loading })} button>
+                <Typography className={classes.title} color="primary" variant="subtitles1" noWrap>
                     <Span>{title}</Span>
                 </Typography>
             }
             secondary={
-                <Typography color="textSecondary">
+                <Typography variant="subtitle2">
                     <Span>{description}</Span>
                 </Typography>
             }
             />
         <ListItemIcon className={classes.listItemIcon}>
-            <>
-                <Typography color="textSecondary" className={classes.starCount}>
+            <>  
+                <StarIcon color="action" className={classes.starIcon} />
+                <Typography variant="subtitle1" className={classes.starCount}>
                     {formatStarCount(starCount)}
                 </Typography>
             </>
