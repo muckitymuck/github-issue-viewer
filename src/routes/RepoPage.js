@@ -5,6 +5,7 @@ import { Query } from 'react-apollo';
 import queryString from 'query-string';
 import gql from 'graphql-tag';
 
+
 import IssueList from '../components/IssueList';
 import Header from '../components/LayoutHeader';
 import Content from '../components/LayoutContent';
