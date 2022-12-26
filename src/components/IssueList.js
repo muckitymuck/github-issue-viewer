@@ -5,9 +5,9 @@ import List from '@material-ui/core/List';
 
 import IssueListItem from './IssueListItem';
 import { Message } from '@material-ui/icons';
-import { TablePagination } from '@material-ui/core';
+//import { TablePagination } from '@material-ui/core';
 import IssuesLoader from './IssuesLoader';
-//import Pagination from './Pagination';
+import Pagination from './Pagination';
 //import Message from './Message';
 
 const Loading = () => (
@@ -63,7 +63,7 @@ class IssueList extends Component {
                                         </Link>
                                     ))}
                                 </List>
-                                <TablePagination
+                                <Pagination
                                     onLoadMore={onLoadMore}
                                     hasNextPage={hasNextPage}
                                 />
