@@ -10,6 +10,7 @@ import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import apolloLogger from 'apollo-link-logger';
 import { BrowserRouter } from 'react-router-dom';
+import CssBaseline from './components/CssBaseline';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -33,7 +34,9 @@ root.render(
   <BrowserRouter>
     <ApolloProvider client={client}>
       <Theme>
-        <App />
+        <CssBaseline>
+          <App /> 
+        </CssBaseline> 
       </Theme>
     </ApolloProvider>
   </BrowserRouter>
