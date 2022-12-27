@@ -35,7 +35,7 @@ root.render(
     <ApolloProvider client={client}>
       <Theme>
         <CssBaseline>
-          <App /> 
+         <App /> 
         </CssBaseline> 
       </Theme>
     </ApolloProvider>
