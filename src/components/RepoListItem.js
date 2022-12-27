@@ -46,7 +46,7 @@ const RepoListItem = ({ classes, className, title, description, starCount, loadi
         <ListItemText
             disableTypography
             primary={
-                <Typography className={classes.title} color="primary" variant="subtitles1" noWrap>
+                <Typography className={classes.title} color="primary" variant="subtitle1" noWrap>
                     <Span>{title}</Span>
                 </Typography>
             }
