@@ -10,6 +10,8 @@ const styles = theme => ({
     },
 });
 
+
+
 const Pagination = ({ classes, children, onLoadMore, hasNextPage }) => (
     <Toolbar className={classes.root}>
         <Button
