@@ -7,6 +7,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 
 import Header from '../components/LayoutContent';
+import Content from '../components/LayoutContent';
+import IssueHeader from '../components/IssueHeader';
+import IssueComment from '../components/IssueComment';
+//import IssueCommentList from '../components/IssueCommentList';
+//import MessageError from '../components/MessageError';
 
 const styles = {
     breadcrumb: {
@@ -43,7 +48,7 @@ class Issue extends Component {
     }
     render() {
         const { classes, match } = this.props;
-        const { owner, name } = this.props;
+        const { owner, name } = match.params;
         const issueNumber = Number(match.params.number);
         return (
             <>
@@ -81,6 +86,22 @@ class Issue extends Component {
                                             url={issue.url}
                                             />
                                     </Header>
+                                    <Content>
+                                        {/* <IssueComment
+                                            loading={loading}
+                                            author={issue.author}
+                                            body={issue.body}
+                                            createdAt={issue.createdAt}
+                                        />
+                                        {!loading && (
+                                            <IssueCommentList
+                                                owner={owner}
+                                                name={name}
+                                                number={issueNumber}
+                                                placeholderCount={Math.min(comments.totalCount, 3)}
+                                            />
+                                        )} */}
+                                    </Content>
                                 </>
                             )
 

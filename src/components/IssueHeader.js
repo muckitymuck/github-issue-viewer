@@ -11,7 +11,7 @@ import { withSkeletonProvider, Span } from './Skeleton';
 
 import TimeAgo from './TimeAgo';
 import { IssueState } from '../constants';
-import IssueStateChip from './IssueStateChip';
+//import IssueStateChip from './IssueStateChip';
 
 
 const styles = theme => ({
@@ -50,7 +50,7 @@ const styles = theme => ({
 const IssueHeader = ({ classes, className, children, title, author, commentsCount, number, createdAt, state, url }) => {
   const timeAgo = createdAt && <TimeAgo date={createdAt} />;
   const issueNumber = number && <span className={classes.issueNumber}>#{number}</span>;
-  const issueState = state && <IssueStateChip className={classes.statusChip} state={state} />;
+//  const issueState = state && <IssueStateChip className={classes.statusChip} state={state} />;
   const meta = <span className={classes.meta}><strong>{author}</strong> opened this issue {timeAgo} ·</span>;
 
   return (
@@ -65,7 +65,7 @@ const IssueHeader = ({ classes, className, children, title, author, commentsCoun
         component="span"
         className={classes.subtitle}
       >
-        {issueState}
+        {/* {issueState} */}
         <Span>{meta} {commentsCount} comments</Span>
       </Typography>
 

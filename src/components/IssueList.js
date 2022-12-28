@@ -49,7 +49,7 @@ class IssueList extends Component {
                             <div>
                                 <List>
                                     {issues.map(issue => (
-                                        <Link key={issue.is} to={`/${owner}/${name}/issues/${issue.number}`}>
+                                        <Link key={issue.id} to={`/${owner}/${name}/issues/${issue.number}`}>
                                             <IssueListItem
                                                 number={issue.number}
                                                 title={issue.title}

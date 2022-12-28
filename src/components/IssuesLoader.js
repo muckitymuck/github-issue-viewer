@@ -11,7 +11,7 @@ const ISSUES_QUERY = gql`
                 states: $states,
                 orderBy: {field: UPDATED_AT, direction: DESC },
                 after: $cursor
-            ){
+            ) {
                 pageInfo {
                     endCursor
                     hasNextPage
@@ -69,6 +69,7 @@ const IssuesLoader = ({ children, owner, name, state, pageSize }) => {
                                         ...prev.repository.issues,
 
                                         pageInfo: fetchMoreResult.repository.issues.pageInfo,
+
                                         edges: [
                                             ...prev.repository.issues.edges,
                                             ...fetchMoreResult.repository.issues.edges,

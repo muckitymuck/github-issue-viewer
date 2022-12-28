@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Query } from 'react-apollo';
 import queryString from 'query-string';
-import gql from 'graphql-tag';
+//import gql from 'graphql-tag';
+import { gql } from "@apollo/client";
 
 
 import IssueList from '../components/IssueList';

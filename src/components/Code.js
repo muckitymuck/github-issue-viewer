@@ -144,7 +144,7 @@ class Code extends PureComponent {
 
                     return (
                         <pre className={cx(classes.rot, themeClassName)}>
-                            <code classNAme={laguageClassName} ref={this.node}>
+                            <code classNAme={languageClassName} ref={this.node}>
                                 {value}
                             </code>
                         </pre>

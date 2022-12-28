@@ -8,7 +8,7 @@ import gql from 'graphql-tag';
 import { withSkeletonProvider } from "./Skeleton";
 // import { Tab } from "@material-ui/icons";
 
-const ISSUES_COUNT_QUERY = gql `
+const ISSUES_COUNT_QUERY = gql`
 query IssuesCount($owner: String!, $name: String!) {
     repository(owner: $owner, name: $name){
         openedCount: issues(states: [OPEN]) {
